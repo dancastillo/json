@@ -1,0 +1,41 @@
+{
+  "name": "@dancastillo/json",
+  "version": "0.0.1",
+  "private": false,
+  "description": "in memory json methods for node.js",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    "require": "./index.cjs",
+    "import": "./index.js"
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "index.cjs",
+    "index.d.ts"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:typescript": "tsd",
+    "build:cjs": "rollup --config .rollup.config.js && standard --fix index.cjs"
+  },
+  "responsibility": {
+    "type": "git",
+    "url": "git+https://github.com/dancastillo/json.git"
+  },
+  "tsd": {
+    "directory": "test/types"
+  },
+  "author": "Dan Castillo <dancastillo99@gmail.com> (https://github.com/dancastillo)",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^4.4.0",
+    "standard": "^17.1.0",
+    "tsd": "^0.29.0"
+  }
+}
