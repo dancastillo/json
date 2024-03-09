@@ -1,3 +1,3 @@
-import { deepEqual } from './deepEqual'
+import { deepEqual } from './lib/deepEqual'
 
 export { deepEqual }
