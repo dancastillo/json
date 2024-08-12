@@ -17,11 +17,12 @@
     "index.d.ts"
   ],
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.6.0"
   },
   "scripts": {
-    "test": "node --test test/*.test.js",
-    "test:typescript": "tsd",
+    "test": "npm run test:unit && npm run test:ts",
+    "test:unit": "c8 node --test",
+    "test:ts": "tsd",
     "build:cjs": "rollup --config .rollup.config.js && standard --fix index.cjs"
   },
   "responsibility": {
@@ -34,6 +35,7 @@
   "author": "Dan Castillo <dancastillo99@gmail.com> (https://github.com/dancastillo)",
   "license": "MIT",
   "devDependencies": {
+    "c8": "^10.1.2",
     "rollup": "^4.4.0",
     "standard": "^17.1.0",
     "tsd": "^0.30.0"
